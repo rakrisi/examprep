@@ -44,10 +44,10 @@ const app = Vue.createApp({
     },
     cr(){
  
-        const today = new Date();
-        const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        const dateTime =  time;
-        this.timestamp = dateTime;
+        
+        this.timestamp = new Date()
+        .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second :'2-digit', hour12: true })
+        .toLowerCase();
 
     },
     start() {
