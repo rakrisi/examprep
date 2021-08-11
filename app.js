@@ -50,13 +50,9 @@ const app = Vue.createApp({
       {
         
        // console.log("timer"+this.q[i]);
-        for(let j=0;j<this.q[i];j++)
+        for(let j=0;j<=this.q[i];j++)
         {
-          if(j ==this.q[i] )
-        {
-          this.starts = ' Exam End';
-          this.play();
-        }
+          
           setTimeout(() => {
                 this.play(),
                 console.log("start");
