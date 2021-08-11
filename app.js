@@ -19,8 +19,15 @@ const app = Vue.createApp({
   methods: {
     addgoal()
     {
+      
       if (!this.question) {
         this.errors.push('Question required.');
+      }
+      else if (this.question>1000) {
+        this.errors.push('Question number should be less than 1000');
+      }
+      else if (this.timer>1000) {
+        this.errors.push('Time minutes should be less than 1000');
       }
     else if (!this.timer) {
         this.errors.push('Timer required.');
