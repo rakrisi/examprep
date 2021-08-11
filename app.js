@@ -19,7 +19,8 @@ const app = Vue.createApp({
   methods: {
     addgoal()
     {
-      
+      this.errors.splice(0);
+
       if (!this.question) {
         this.errors.push('Question required.');
       }
